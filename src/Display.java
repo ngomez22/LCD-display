@@ -54,6 +54,108 @@ public class Display {
 		return digits;
 	}
 	
+	private String zeroRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row == height - 1)
+			return buildRow(true, true, true);
+		else
+			return buildRow(true, false, true);
+	}
+	
+	private String oneRow(int row) {
+		if(row == 0)
+			return buildRow(false, false, false);
+		else
+			return buildRow(false, false, true);
+	}
+	
+	private String twoRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row < (height / 2))
+			return buildRow(false, false, true);
+		else if(row == (height / 2))
+			return buildRow(false, true, true);
+		else if(row == height - 1)
+			return buildRow(true, true, false);
+		else
+			return buildRow(true, false, false);
+	}
+	
+	private String threeRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row == (height / 2) || row == height - 1)
+			return buildRow(false, true, true);
+		else
+			return buildRow(false, false, true);
+	}
+	
+	private String fourRow(int row) {
+		if(row == 0)
+			return buildRow(false, false, false);
+		else if(row < (height / 2))
+			return buildRow(true, false, true);
+		else if(row == (height / 2))
+			return buildRow(true, true, true);
+		else
+			return buildRow(false, false, true);
+	}
+	
+	private String fiveRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row < (height / 2))
+			return buildRow(true, false, false);
+		else if(row == (height / 2))
+			return buildRow(true, true, false);
+		else if(row == height - 1)
+			return buildRow(false, true, true);
+		else
+			return buildRow(false, false, true);
+	}
+	
+	private String sixRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row < (height / 2))
+			return buildRow(true, false, false);
+		else if(row == (height / 2))
+			return buildRow(true, true, false);
+		else if(row == height - 1)
+			return buildRow(true, true, true);
+		else
+			return buildRow(true, false, true);
+	}
+	
+	private String sevenRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else
+			return buildRow(false, false, true);
+	}
+	
+	private String eightRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row == (height / 2)  || row == height - 1)
+			return buildRow(true, true, true);
+		else
+			return buildRow(true, false, true);
+	}
+	
+	private String nineRow(int row) {
+		if(row == 0)
+			return buildRow(false, true, false);
+		else if(row < (height / 2))
+			return buildRow(true, false, true);
+		else if(row == (height / 2))
+			return buildRow(true, true, true);
+		else
+			return buildRow(false, false, true);
+	}
+	
 	private String buildRow(boolean leftEdge, boolean fillMiddle, boolean rightEdge) {
 		StringBuilder line = new StringBuilder();
 		if(leftEdge)
