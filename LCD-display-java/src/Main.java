@@ -1,16 +1,15 @@
-import java.util.List;
-
 public class Main {
 	
 	public static void main(String[] args) {
 		try {
 			Reader r = new Reader();
-			List<Display> input = r.getInput();
-			for(Display d : input) {
+			for(Display d : r.getInput()) {
 				System.out.println(d.buildOutput());
 			}
+		} catch(NumberFormatException nfe) {
+			System.out.println("Input should be numeric");
 		} catch(Exception e) {
-			System.out.println("Incorrect input!");
+			System.out.println(e.getMessage());
 		}
 	}
 
