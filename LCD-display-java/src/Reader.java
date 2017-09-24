@@ -28,7 +28,9 @@ public class Reader {
 	}
 	
 	/**
-	 * Reads the input provided by the user
+	 * Read the user's input
+	 * @return a list of displays
+	 * @throws Exception if the input is different from the expected format
 	 */
 	public List<Display> getInput() throws Exception {
 		ArrayList<Display> input = new ArrayList<>();
