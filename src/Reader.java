@@ -35,8 +35,8 @@ public class Reader {
 		String line = sc.nextLine();
 		while(!line.equals(END)) {
 			String[] data = line.split(DELIMITER);
-			int size = Integer.parseInt(data[0]);
-			int number = Integer.parseInt(data[1]);
+			int size = Integer.parseInt(data[0].trim());
+			int number = Integer.parseInt(data[1].trim());
 			input.add(new Display(size, number));
 			line = sc.nextLine();
 		}
