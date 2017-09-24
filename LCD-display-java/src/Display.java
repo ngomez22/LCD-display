@@ -264,7 +264,7 @@ public class Display {
 	/**
 	 * Build a row according to the parameters
 	 * @param leftEdge. Indicates if the row starts with | or with a blank space
-	 * @param fillMiddle. Indicates if the row will have _ between the edges of blank spaces
+	 * @param fillMiddle. Indicates if the row will have _ between the edges or blank spaces
 	 * @param rightEdge. Indicates if the row will end with | or with a blank space
 	 * @return a row with length equal to width, made of |, _ and blank spaces
 	 */
