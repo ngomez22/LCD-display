@@ -54,6 +54,47 @@ public class Display {
 		return digits;
 	}
 	
+	public String buildOutput() {
+		StringBuilder output = new StringBuilder();
+		for(int i = 0; i < height; i++) {
+			StringBuilder outputRow = new StringBuilder();
+			for(int j = digits.size() - 1; j >= 0; j--) {
+				outputRow.append(getRow(digits.get(j), i));
+				outputRow.append(WHITESPACE);
+			}
+			outputRow.append(LINE_BREAK);
+			output.append(outputRow.toString());
+		}
+		return output.toString();
+	}
+	
+	private String getRow(int digit, int row) {
+		switch(digit) {
+			case 0:
+				return zeroRow(row);
+			case 1:
+				return oneRow(row);
+			case 2:
+				return twoRow(row);
+			case 3:
+				return threeRow(row);
+			case 4:
+				return fourRow(row);
+			case 5:
+				return fiveRow(row);
+			case 6:
+				return sixRow(row);
+			case 7:
+				return sevenRow(row);
+			case 8:
+				return eightRow(row);
+			case 9:
+				return nineRow(row);
+			default:
+				return "";
+		}
+	}
+	
 	private String zeroRow(int row) {
 		if(row == 0)
 			return buildRow(false, true, false);
