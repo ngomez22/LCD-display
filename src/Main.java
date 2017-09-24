@@ -12,9 +12,6 @@ public class Main {
 		} catch(Exception e) {
 			System.out.println("Invalid input!");
 		}
-		
-		
-		System.out.println("done!");
 	}
 
 }
