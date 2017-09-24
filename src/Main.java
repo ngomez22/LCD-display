@@ -7,10 +7,10 @@ public class Main {
 			Reader r = new Reader();
 			List<Display> input = r.getInput();
 			for(Display d : input) {
-				System.out.println(d.toString());
+				System.out.println(d.buildOutput());
 			}
 		} catch(Exception e) {
-			System.out.println("Invalid input!");
+			System.out.println("Incorrect input!");
 		}
 	}
 
