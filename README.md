@@ -9,7 +9,7 @@ Solución desarrollada desde cero.
 
 ## Descripción de la solución
 La solución desarrollada cuenta con tres clases
-### Display
+### [Display](https://github.com/ngomez22/LCD-display/blob/master/LCD-display-java/src/Display.java)
 Es la clase donde se ejecuta toda la lógica. Para instanciar un objeto de esta clase es necesario proporcionarle el número que se va a imprimir y el tamaño que tendrán estos números.
  
 El método `buildRow` es la operación más básica de esta clase. Construye una cadena con el ancho correspondiente a un dígito a partir de tres parámetros booleanos que recibe. Estos parámetros indican si comienza por | o no, si el centro va lleno o vacío, y si termina por | o no. Si por ejemplo, cada dígito debería ocupar 4 columnas y se llama `buildRow(true, true, false)` se obtendrá '|__ '. 
@@ -17,8 +17,11 @@ El método `buildRow` es la operación más básica de esta clase. Construye una
 `buildRow` es llamado por los métodos correspondientes a cada número, `zeroRow`, `oneRow`, etc., que indican cómo se construye cada fila de un cierto número.
 
 Finalmente, `buildOutput` es el encargado de utilizar todo lo anterior para obtener el resultado deseado. Este método recorre los dígitos a imprimir una vez por cada fila que tendrá el resultado. En cada uno de estos recorridos, pide a los métodos del número correspondiente que generen la n-ésima fila de ese número (siendo n la fila actual que se está construyendo), y va concatenando las cadenas que cada número retorna para obtener las filas completas del resultado.
-### Reader
+
+Está clase cuenta con pruebas, que se encuentran en el archivo [tests/DisplayTest.java](https://github.com/ngomez22/LCD-display/blob/master/LCD-display-java/tests/DisplayTest.java)
+
+### [Reader](https://github.com/ngomez22/LCD-display/blob/master/LCD-display-java/src/Reader.java)
 Esta clase únicamente lee el input del usuario, valida cada linea introducida y retorna una colección de Displays.
-### Main
+### [Main](https://github.com/ngomez22/LCD-display/blob/master/LCD-display-java/src/Main.java)
 Recibe la colección de Displays del Reader e imprime todos los resultados en consola, o en caso que haya un error en los valores introducidos por el usuario, le informa imprimiendo un mensaje en consola.
 
