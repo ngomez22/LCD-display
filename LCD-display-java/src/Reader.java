@@ -39,7 +39,9 @@ public class Reader {
 			String[] data = line.split(DELIMITER);
 			if(data.length != 2) throw new Exception("Invalid input");
 			int size = Integer.parseInt(data[0].trim());
-			int number = Integer.parseInt(data[1].trim());
+			String number = data[1].trim();
+			int digits = Integer.parseInt(number);
+			if(digits < 0) throw new Exception("Invalid input");
 			if(size < 1 || size > 10) throw new Exception("Invalid size");
 			input.add(new Display(size, number));
 			line = sc.nextLine();

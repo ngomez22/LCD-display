@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Display {
 	
 	/**
@@ -27,38 +24,21 @@ public class Display {
 	/**
 	 * Digits to print
 	 */
-	private List<Integer> digits;
+	private String digits;
 	
 	/**
 	 * Create a new display to print the given number
 	 * @param size
 	 * @param number
 	 */
-	public Display(int size, int number) {
+	public Display(int size, String number) {
 		// Use this values to get results identical to the example
 		// USING THESE VALUES WILL NOT WORK NICELY WHEN size IS 1
 		//this.height = (size * 2) + 1;
 		//this.width = (3 * size) - 2;
 		this.height = (size * 2) + 3;
 		this.width = size + 2;
-		this.digits = getDigits(number);
-	}
-	
-	/**
-	 * Extract every digit in the number to print
-	 * @return list containing the digits in reverse order
-	 */
-	private List<Integer> getDigits(int number) {
-		ArrayList<Integer> digits = new ArrayList<>();
-		if(number == 0)
-			digits.add(0);
-		int quotient = number;
-		while(quotient > 0) {
-			int remainder = quotient % 10;
-			digits.add(remainder);
-			quotient /= 10;
-		}
-		return digits;
+		this.digits = number;
 	}
 	
 	/**
@@ -84,8 +64,8 @@ public class Display {
 		StringBuilder output = new StringBuilder();
 		for(int i = 0; i < height; i++) {
 			StringBuilder outputRow = new StringBuilder();
-			for(int j = digits.size() - 1; j >= 0; j--) {
-				outputRow.append(getRow(digits.get(j), i));
+			for(int j = 0; j < digits.length(); j++) {
+				outputRow.append(getRow(digits.charAt(j), i));
 				outputRow.append(WHITESPACE);
 			}
 			outputRow.append(LINE_BREAK);
@@ -100,27 +80,27 @@ public class Display {
 	 * @param n
 	 * @return the nth row of the given digit
 	 */
-	private String getRow(int digit, int n) {
+	private String getRow(char digit, int n) {
 		switch(digit) {
-			case 0:
+			case '0':
 				return zeroRow(n);
-			case 1:
+			case '1':
 				return oneRow(n);
-			case 2:
+			case '2':
 				return twoRow(n);
-			case 3:
+			case '3':
 				return threeRow(n);
-			case 4:
+			case '4':
 				return fourRow(n);
-			case 5:
+			case '5':
 				return fiveRow(n);
-			case 6:
+			case '6':
 				return sixRow(n);
-			case 7:
+			case '7':
 				return sevenRow(n);
-			case 8:
+			case '8':
 				return eightRow(n);
-			case 9:
+			case '9':
 				return nineRow(n);
 			default:
 				return "";

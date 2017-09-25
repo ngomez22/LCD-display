@@ -110,7 +110,7 @@ public class DisplayTest extends TestCase{
 	public void setup() {
 		singleDigitDisplays = new Display[10];
 		for(int i = 0; i < 10; i++) {
-			singleDigitDisplays[i] = new Display(2, i);
+			singleDigitDisplays[i] = new Display(2, "" + i);
 		}
 	}
 	
@@ -118,7 +118,7 @@ public class DisplayTest extends TestCase{
 	 * Create a single display of size 3 for the number 1234567890
 	 */
 	public void setup2() {
-		mulipleDigitsDisplay = new Display(3, 1234567890);
+		mulipleDigitsDisplay = new Display(3, "1234567890");
 	}
 	
 	/**
