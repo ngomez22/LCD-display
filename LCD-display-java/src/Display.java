@@ -35,6 +35,10 @@ public class Display {
 	 * @param number
 	 */
 	public Display(int size, int number) {
+		// Use this values to get results identical to the example
+		// USING THESE VALUES WILL NOT WORK NICELY WHEN size IS 1
+		//this.height = (size * 2) + 1;
+		//this.width = (3 * size) - 2;
 		this.height = (size * 2) + 3;
 		this.width = size + 2;
 		this.digits = getDigits(number);
@@ -278,6 +282,8 @@ public class Display {
 		if(fillMiddle)
 			for(int i = 1; i < width - 1; i++)
 				line.append(HORIZONTAL_BAR);
+				// Use the line below instead of the one above to include a space between every -
+				//line.append(i % 2 == 0 ? WHITESPACE : HORIZONTAL_BAR);
 		else 
 			for(int i = 1; i < width - 1; i++)
 				line.append(WHITESPACE);
