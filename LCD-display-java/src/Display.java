@@ -62,6 +62,20 @@ public class Display {
 	}
 	
 	/**
+	 * @return the height
+	 */
+	public int getHeight() {
+		return height;
+	}
+	
+	/**
+	 * @return the width
+	 */
+	public int getWidth() {
+		return width;
+	}
+
+	/**
 	 * Build every row needed to print the number, adding every digit's corresponding row
 	 * @return a String made of multiple lines, containing the LCD representation of the
 	 * 		specified number
