@@ -25,3 +25,60 @@ Esta clase únicamente lee el input del usuario, valida cada linea introducida y
 ### [Main](https://github.com/ngomez22/LCD-display/blob/master/LCD-display-java/src/Main.java)
 Recibe la colección de Displays del Reader e imprime todos los resultados en consola, o en caso que haya un error en los valores introducidos por el usuario, le informa imprimiendo un mensaje en consola.
 
+## Resultados
+### Entrada
+```
+2,123
+3,456
+4,789
+5,0
+```
+### Salida
+```
+      __   __  
+   |    |    | 
+   |    |    | 
+   |  __|  __| 
+   | |       | 
+   | |       | 
+   | |__   __| 
+
+       ___   ___  
+|   | |     |     
+|   | |     |     
+|   | |     |     
+|___| |___  |___  
+    |     | |   | 
+    |     | |   | 
+    |     | |   | 
+    |  ___| |___| 
+
+ ____   ____   ____  
+     | |    | |    | 
+     | |    | |    | 
+     | |    | |    | 
+     | |    | |    | 
+     | |____| |____| 
+     | |    |      | 
+     | |    |      | 
+     | |    |      | 
+     | |    |      | 
+     | |____|      | 
+
+ _____  
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|     | 
+|_____| 
+
+
+```
+
