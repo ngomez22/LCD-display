@@ -15,7 +15,7 @@ El método `buildRow` es la operación más básica de esta clase. Construye una
 
 `buildRow` es llamado por los métodos correspondientes a cada número, `zeroRow`, `oneRow`, etc., que indican cómo se construye cada fila de un cierto número.
 
-Finalmente, el único método público de la clase, `buildOutput`, es el encargado de utilizar todo lo anterior para obtener el resultado deseado. Este método recorre los dígitos a imprimir una vez por cada fila que tendrá el resultado. En cada uno de estos recorridos, pide a los métodos del número correspondiente que generen la n-ésima fila de ese número, y va concatenando las cadenas que cada número retorna para obtener las filas completas del resultado.
+Finalmente, el único método público de la clase, `buildOutput`, es el encargado de utilizar todo lo anterior para obtener el resultado deseado. Este método recorre los dígitos a imprimir una vez por cada fila que tendrá el resultado. En cada uno de estos recorridos, pide a los métodos del número correspondiente que generen la n-ésima fila de ese número (siendo n la fila actual que se está construyendo), y va concatenando las cadenas que cada número retorna para obtener las filas completas del resultado.
 ### Reader
 Esta clase únicamente lee el input del usuario, valida cada linea introducida y retorna una colección de Displays.
 ### Main
