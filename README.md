@@ -19,5 +19,5 @@ Finalmente, el único método público de la clase, `buildOutput`, es el encarga
 ### Reader
 Esta clase únicamente lee el input del usuario, valida cada linea introducida y retorna una colección de Displays.
 ### Main
-Recibe la colección de Displays del Reader e imprime todos los resultados en consola.
+Recibe la colección de Displays del Reader e imprime todos los resultados en consola, o en caso que haya un error en los valores introducidos por el usuario, le informa imprimiendo un mensaje en consola.
 
