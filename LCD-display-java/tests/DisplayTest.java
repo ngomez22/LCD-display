@@ -122,13 +122,23 @@ public class DisplayTest extends TestCase{
 	}
 	
 	/**
+	 * Create a display with every possible size (1 - 10)
+	 */
+	public void setup3() {
+		singleDigitDisplays = new Display[10];
+		for(int i = 0; i < 10; i++) {
+			singleDigitDisplays[i] = new Display(i + 1, "" + 0);
+		}
+	}
+	
+	/**
 	 * Test the height is being initialized with correct values
 	 */
 	@Test
 	public void testHeight() {
-		setup();
+		setup3();
 		for(int i = 0; i < 10; i++) {
-			assertEquals((2 * 2) + 3, singleDigitDisplays[i].getHeight());
+			assertEquals(((i + 1) * 2) + 3, singleDigitDisplays[i].getHeight());
 		}
 	}
 	
@@ -137,9 +147,9 @@ public class DisplayTest extends TestCase{
 	 */
 	@Test
 	public void testWidth() {
-		setup();
+		setup3();
 		for(int i = 0; i < 10; i++) {
-			assertEquals(2 + 2, singleDigitDisplays[i].getWidth());
+			assertEquals((i + 1) + 2, singleDigitDisplays[i].getWidth());
 		}
 	}
 	
