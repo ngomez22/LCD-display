@@ -5,6 +5,7 @@ Solución desarrollada desde cero.
 - En el enunciado se especifica que deberíamos usar el caracter '-', pero se utlizó '_' dado que este fue el que utilizaron en los ejemplos y hace que el resultado se vea mejor.
 - Según el enunciado, se recibe el tamaño que se desea que tengan los dígitos, y cada dígito debe medir tamaño+2 de ancho y 2\*tamaño + 3 de alto. Sin embargo, en los ejemplos esto no se cumple. En el primer caso, el tamaño es 2, pero los números miden 4\*5 en lugar de 4\*7. En el segundo ejemplo, el tamaño dado es 3, por lo cual los números deberían medir 5\*9, pero miden 7\*7. En el código se encuentran ambas opciones (en el constructor de la clase Display), pero la que corresponde a las dimensiones como las del ejemplo está comentada.
 - No se incluyeron espacios entre las barras horizontales ('_') aunque los ejemplos sí los tuvieran, dado que con las dimensiones especificadas, el resultado era mejor sin los espacios. No obstante, también se encuentra una linea comentada en el método `buildRow` de la clase Display, con la cual se puede incluir un espacio entre cada guión.
+- En caso que se cambie el código por alguna de las modificaciones que están comentadas, mencionadas anteriormente, __los tests fallarán__.
 
 ## Descripción de la solución
 La solución desarrollada cuenta con tres clases
@@ -15,7 +16,7 @@ El método `buildRow` es la operación más básica de esta clase. Construye una
 
 `buildRow` es llamado por los métodos correspondientes a cada número, `zeroRow`, `oneRow`, etc., que indican cómo se construye cada fila de un cierto número.
 
-Finalmente, el único método público de la clase, `buildOutput`, es el encargado de utilizar todo lo anterior para obtener el resultado deseado. Este método recorre los dígitos a imprimir una vez por cada fila que tendrá el resultado. En cada uno de estos recorridos, pide a los métodos del número correspondiente que generen la n-ésima fila de ese número (siendo n la fila actual que se está construyendo), y va concatenando las cadenas que cada número retorna para obtener las filas completas del resultado.
+Finalmente, `buildOutput` es el encargado de utilizar todo lo anterior para obtener el resultado deseado. Este método recorre los dígitos a imprimir una vez por cada fila que tendrá el resultado. En cada uno de estos recorridos, pide a los métodos del número correspondiente que generen la n-ésima fila de ese número (siendo n la fila actual que se está construyendo), y va concatenando las cadenas que cada número retorna para obtener las filas completas del resultado.
 ### Reader
 Esta clase únicamente lee el input del usuario, valida cada linea introducida y retorna una colección de Displays.
 ### Main
